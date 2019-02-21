@@ -6,7 +6,6 @@ import {FormatOnBlur} from "../_helpers/FormatOnBlur";
 
 export const TextInput = (c: ReactiveFormControl | FormGroup | FormArray) => {
 	const control = c as ReactiveFormControl;
-	console.log('control', control);
 	const {
 		capitalizeOnBlur,
 		formatCpfOnBlur,

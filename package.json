@@ -56,6 +56,9 @@
     "react-dom": "^16.8.2",
     "react-reactive-form": "^1.0.28"
   },
+  "scripts": {
+    "build": "tsc --p tsconfig.json;cp ./package.json ./ts-build/package.json"
+  },
   "postinstall": "mkdir -p node_modules/@material-ui/core/node_modules/@types/jss && cp -r node_modules/@types/jss node_modules/@material-ui/core/node_modules/@types",
   "name": "reactive-form-components",
   "version": "1.0.0",

@@ -1,7 +1,6 @@
 /node_modules/
 .idea
 /.idea
-/ts-build/
 yarn-error.log
 .awcache
 public/app.bundle.js
