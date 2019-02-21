@@ -1,39 +1,34 @@
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     mode: 'development',
+    externals: [nodeExternals()],
     context: __dirname,
     // devtool: 'cheap-source-map',
     entry: {
-        // app: [__dirname + "/src/app.tsx"]
-        app: ['webpack-hot-middleware/client?reload=true', __dirname + '/src/app.tsx']
+        app: [__dirname + '/src/index.ts']
     },
     output: {
         path: __dirname + '/public',
         filename: '[name].bundle.js',
-        publicPath: 'http://localhost:3000/'
+        library: '',
+        libraryTarget: 'commonjs'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css'],
         modules: [__dirname + '/src', __dirname + '/node_modules'],
-        alias: {
-            history: 'history'
-        }
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
+        new BundleAnalyzerPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: "'development'",
+                NODE_ENV: "'production'",
                 BROWSER: 'true'
             }
         })
     ],
-    // optimization: {
-    //   removeAvailableModules: false,
-    //   removeEmptyChunks: false,
-    //   splitChunks: false,
-    // },
     module: {
         rules: [
             {
@@ -58,10 +53,6 @@ module.exports = {
             {
                 test: /(\.tsx|\.ts)$/,
                 use: [
-                    {
-                        loader: 'babel-loader',
-                        options: { babelrc: true }
-                    },
                     {
                         loader: 'ts-loader',
                         options: {
