@@ -36,5 +36,13 @@
     "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.2",
     "react-reactive-form": "^1.0.28"
-  }
+  },
+  "name": "reactive-form-components",
+  "version": "1.0.0",
+  "description": "components to use with react-reactive-form",
+  "main": "index.js",
+  "repository": "git@github.com:saculbr/reactive-form-components.git",
+  "author": "Lucas <lucasljj@gmail.com>",
+  "license": "MIT",
+  "private": false
 }
