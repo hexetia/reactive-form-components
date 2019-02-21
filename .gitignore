@@ -1,0 +1,12 @@
+/node_modules/
+.idea
+/.idea
+/ts-build/
+yarn-error.log
+.awcache
+public/app.bundle.js
+public/app.*.js
+public/stats.json
+public/*.*.bundle.js
+public/public/
+public/build/stats.json

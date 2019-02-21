@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "module": "esnext", // use ES2015 modules
+    "target": "es2016", // compile to ES2015 (Babel will do the rest)
+    "baseUrl": "src", // enables you to import relative to this folder
+    "sourceMap": true, // make TypeScript generate sourcemaps
+    "outDir": "ts-build", // output directory to build to (irrelevant because we use Webpack most of the time)
+    "jsx": "react", // enable JSX mode, but "preserve" tells TypeScript to not transform it (we'll use Babel)
+    "lib": ["es2017.object", "es2017", "dom"],
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "public", ".awcache", "dev"]
+}
