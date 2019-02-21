@@ -15,6 +15,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src"],
+  "include": ["."],
   "exclude": ["node_modules", "public", ".awcache", "dev"]
 }

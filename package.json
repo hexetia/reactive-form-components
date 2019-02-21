@@ -60,7 +60,7 @@
   "name": "reactive-form-components",
   "version": "1.0.0",
   "description": "components to use with react-reactive-form",
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": "git@github.com:saculbr/reactive-form-components.git",
   "author": "Lucas <lucasljj@gmail.com>",
   "license": "MIT",
